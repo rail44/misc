@@ -1,2 +1,0 @@
-replace#global#^._NUMAdisable=$#_NUMAdisable=y
-replace#global#^_BFQ_enable_=$#_BFQ_enable_=y

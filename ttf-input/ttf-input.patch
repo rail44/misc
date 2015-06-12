@@ -1,4 +1,3 @@
-Only in ttf-input.patched: .PKGBUILD.swp
 diff -ur ttf-input/PKGBUILD ttf-input.patched/PKGBUILD
 --- ttf-input/PKGBUILD	2015-03-16 19:30:50.000000000 +0900
 +++ ttf-input.patched/PKGBUILD	2015-06-11 16:34:58.339611769 +0900
@@ -7,7 +6,7 @@ diff -ur ttf-input/PKGBUILD ttf-input.patched/PKGBUILD
  makedepends=()
  conflicts=()
 -source=("Input-Font.zip::http://input.fontbureau.com/build/?fontSelection=whole&a=0&g=0&i=0&l=0&zero=0&asterisk=0&braces=0&preset=default&line-height=1.2&accept=I+do&email=")
-+source=("Input-Font.zip::http://input.fontbureau.com/build/?fontSelection=fourStyleFamily&regular=InputMonoCompressed-Light&italic=InputMonoCompressed-LightItalic&bold=InputMonoCompressed-Medium&boldItalic=InputMonoCompressed-MediumItalic&a=0&g=ss&i=serifs_round&l=serifs_round&zero=slash&asterisk=height&braces=straight&preset=andale&line-height=1&accept=I+do&email=")
++source=("Input-Font.zip::http://input.fontbureau.com/build/?fontSelection=fourStyleFamily&regular=InputMonoCompressed-Light&italic=InputMonoCompressed-LightItalic&bold=InputMonoCompressed-Medium&boldItalic=InputMonoCompressed-MediumItalic&a=0&g=ss&i=serifs_round&l=serifs_round&zero=slash&asterisk=height&braces=straight&preset=andale&line-height=1.1&accept=I+do&email=")
  sha256sums=('d570020c596ef0c888f6a52d4141c0300dc0204f051ed9b194d5e3be9bbeee22')
  install=$pkgname.install
  

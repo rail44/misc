@@ -24,7 +24,8 @@ function! lightline#tab#filename(n) abort
   let buflist = tabpagebuflist(a:n)
   let winnr = tabpagewinnr(a:n)
   let buf = buflist[tabpagewinnr(a:n) - 1]
-  return pathshorten(bufname(buf))
+  let _ =  pathshorten(bufname(buf))
+  return strlen(_) ? _ : '[No Name]'
 endfunction
 
 let g:lightline = {

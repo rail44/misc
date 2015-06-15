@@ -24,8 +24,14 @@ function! lightline#tab#filename(n) abort
   let buflist = tabpagebuflist(a:n)
   let winnr = tabpagewinnr(a:n)
   let buf = buflist[tabpagewinnr(a:n) - 1]
-  let _ =  pathshorten(bufname(buf))
-  return strlen(_) ? _ : '[No Name]'
+  let filepath =  bufname(buf)
+  if stridx(filepath, 'term://') == 0
+    return '[Term]'
+  elseif strlen(filepath) == 0
+    return '[No Name]'
+  else
+    return pathshorten(filepath)
+  endif
 endfunction
 
 let g:lightline = {
@@ -35,8 +41,8 @@ let g:lightline = {
 \    'right': [['percent'], ['lineinfo']],
 \  },
 \  'tab': {
-\    'active': ['filename'],
-\    'inactive': ['filename'],
+\    'active': ['filename', 'modified'],
+\    'inactive': ['filename', 'modified'],
 \  },
 \  'component': {
 \    'cwd': '%{getcwd()}',

@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
+Plug 'rail44/misc', {'rtp': 'base16/vim'}
 call plug#end()
 
 set number
@@ -12,7 +12,7 @@ set laststatus=2
 set noshowmode
 
 let base16colorspace=256
-colorscheme base16-solarized
+colorscheme base16-palette
 
 syntax enable
 filetype plugin indent on
@@ -31,11 +31,10 @@ function! lightline#tab#filename(n) abort
     return '[No Name]'
   else
     return pathshorten(filepath)
-  endif
+  ndif
 endfunction
 
 let g:lightline = {
-\  'colorscheme': 'solarized_dark',
 \  'active': {
 \    'left': [['mode', 'paste'], ['cwd']],
 \    'right': [['percent'], ['lineinfo']],

@@ -6,6 +6,8 @@ PALETTE_SCHEME = $(SCHEMES_DIR)/palette.yml
 
 build: vim output/gnome-terminal output/shell
 
+install: build
+
 $(BASE16_DIR):
 	git clone https://github.com/rail44/base16-builder.git $@
 
@@ -19,8 +21,9 @@ output/%: $(OUTPUT_DIR)/%
 	cp -rf $< output
 
 vim: $(OUTPUT_DIR)/vim
+	rm -rf vim
 	mkdir -p vim
 	cp -rf $< vim/colors
 
 clean:
-	rm -rf output $(BASE16_DIR) vim
+	rm -rf output $(BASE16_DIR)

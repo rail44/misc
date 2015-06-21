@@ -1,9 +1,17 @@
-$(HOME)/.config/fish/config.fish: config.fish $(HOME)/.config/fish/base16-shell
+CONFIG_DIR = $(HOME)/.config/fish
+
+build: ../base16/output/shell
+
+install: build $(CONFIG_DIR)/config.fish
+
+$(CONFIG_DIR)/config.fish: config.fish $(CONFIG_DIR)/base16-shell
 	cp -f $< $@
 
-$(HOME)/.config/fish/base16-shell: ../base16/output/shell
+$(CONFIG_DIR)/base16-shell: ../base16/output/shell
 	rm -rf $@
 	cp -rf $< $@
 
 ../base16/output/shell:
 	make -C ../base16 output/shell
+
+clean:

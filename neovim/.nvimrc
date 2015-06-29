@@ -1,7 +1,11 @@
 call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
+Plug 'leafgarland/typescript-vim'
+
 Plug 'itchyny/lightline.vim'
+
 Plug 'rail44/misc', {'rtp': 'base16/vim'}
+"Plug '~/Repositories/misc/base16/vim'
 call plug#end()
 
 set number
@@ -10,6 +14,7 @@ set spelllang+=cjk
 set spell
 set laststatus=2
 set noshowmode
+set cursorline
 
 let base16colorspace=256
 colorscheme base16-palette
@@ -31,7 +36,7 @@ function! lightline#tab#filename(n) abort
     return '[No Name]'
   else
     return pathshorten(filepath)
-  ndif
+  endif
 endfunction
 
 let g:lightline = {

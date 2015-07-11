@@ -4,7 +4,7 @@ SCHEMES_DIR = $(BASE16_DIR)/schemes
 BASE16_SCRIPT = $(BASE16_DIR)/base16
 PALETTE_SCHEME = $(SCHEMES_DIR)/palette.yml
 
-build: vim output/gnome-terminal output/shell
+build: vim output/gnome-terminal output/shell output/st
 
 install: build
 

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=st
+Comment=Simple Terminal
+Keywords=shell;prompt;command;commandline;
+TryExec=st
+Exec=st
+Icon=utilities-terminal
+Type=Application
+Categories=System;TerminalEmulator;
+StartupNotify=true

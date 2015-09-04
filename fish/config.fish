@@ -5,3 +5,4 @@ set -x EDITOR nvim
 set -x GOPATH $HOME/go
 set -x PATH $HOME/go/bin $PATH
 set -x PATH $HOME/.composer/vendor/bin $PATH
+set -x CHICKEN_REPOSITORY $HOME/.chicken

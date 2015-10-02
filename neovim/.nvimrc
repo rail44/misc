@@ -5,6 +5,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
 
+"Plug 'Shougo/deoplete.nvim'
+Plug 'Valloric/YouCompleteMe'
+
 Plug 'rail44/misc', {'rtp': 'base16/vim'}
 "Plug '~/Repositories/misc/base16/vim'
 call plug#end()

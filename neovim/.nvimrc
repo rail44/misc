@@ -19,6 +19,7 @@ set spell
 set laststatus=2
 set noshowmode
 set cursorline
+set wildmode=list:longest
 
 let base16colorspace=256
 colorscheme base16-palette

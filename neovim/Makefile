@@ -13,6 +13,7 @@ $(YCM_CORE_LIB):
 
 $(VIM_PLUG_DIR): $(HOME)/.nvimrc
 	nvim +PlugInstall +qall
+	touch $@
 
 $(HOME)/.nvimrc: .nvimrc $(NVIM_DIR) $(NVIM_DIR)/autoload/plug.vim 
 	cp -f $< $@

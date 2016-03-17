@@ -2,15 +2,10 @@ PLUG_VIM_URL = https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.v
 NVIM_DIR = $(HOME)/.config/nvim
 INITVIM = $(NVIM_DIR)/init.vim
 VIM_PLUG_DIR = $(HOME)/.nvim/plugged
-YCM_DIR = $(VIM_PLUG_DIR)/YouCompleteMe
-YCM_CORE_LIB = $(YCM_DIR)/third_party/ycmd/ycm_core.so
 
 build:
 
-install: build $(INITVIM) $(VIM_PLUG_DIR) $(YCM_CORE_LIB)
-
-$(YCM_CORE_LIB):
-	cd $(YCM_DIR) && python2 ./install.py --clang-completer --system-libclang --system-boost
+install: build $(INITVIM) $(VIM_PLUG_DIR)
 
 $(VIM_PLUG_DIR): $(INITVIM)
 	nvim +PlugInstall +qall

@@ -1,7 +1,7 @@
 PLUG_VIM_URL = https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 NVIM_DIR = $(HOME)/.config/nvim
 INITVIM = $(NVIM_DIR)/init.vim
-VIM_PLUG_DIR = $(HOME)/.nvim/plugged
+VIM_PLUG_DIR = $(NVIM_DIR)/plugged
 
 build:
 

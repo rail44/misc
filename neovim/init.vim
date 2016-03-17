@@ -6,7 +6,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'Shougo/deoplete.nvim'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 set number

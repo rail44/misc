@@ -1,4 +1,4 @@
-default: default/base16 default/fish default/neovim
+default: default/alacritty default/fish default/neovim
 
 default/%: clean/% build/% install/%
 	@:

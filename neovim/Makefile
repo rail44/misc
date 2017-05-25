@@ -12,14 +12,11 @@ $(VIM_PLUG_DIR): $(INITVIM)
 	touch $@
 
 $(INITVIM): init.vim $(NVIM_DIR)/autoload/plug.vim 
-	cp -f $< $@
-	ln -nsf $@ $(HOME)/.vimrc
+	ln -sf $(realpath $<) $@
+	touch $@
 
-$(NVIM_DIR)/autoload/plug.vim: $(NVIM_DIR)
-	curl -fLo $@ --create-dirs $(PLUG_VIM_URL)
-
-$(NVIM_DIR):
-	mkdir -p $@
-	ln -nsf $@ $(HOME)/.vim
+$(NVIM_DIR)/autoload/plug.vim:
+	mkdir -p $(NVIM_DIR)/autoload
+	curl -fLo $@ $(PLUG_VIM_URL)
 
 clean:

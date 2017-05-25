@@ -1,11 +1,18 @@
 call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx'
+
+Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/vimproc.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'racer-rust/vim-racer'
+Plug 'shawncplus/phpcomplete.vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'Shougo/deoplete.nvim'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 set number
@@ -23,6 +30,9 @@ filetype plugin indent on
 source $VIMRUNTIME/plugin/matchit.vim
 
 tnoremap <Esc> <C-\><C-n> 
+
+let g:deoplete#enable_at_startup = 1
+let g:racer_experimental_completer = 1
 
 function! lightline#tab#filename(n) abort
   let buflist = tabpagebuflist(a:n)

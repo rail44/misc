@@ -1,8 +1,7 @@
-eval (envoy -pf)
-eval sh $HOME/.config/fish/base16-shell/base16-palette.light.sh
+set -x TERM xterm-256color
 
-set -x EDITOR nvim
-set -x GOPATH $HOME/go
-set -x PATH $HOME/go/bin $PATH
-set -x PATH $HOME/.composer/vendor/bin $PATH
-set -x CHICKEN_REPOSITORY $HOME/.chicken
+set -x PATH $HOME/.cargo/bin $PATH
+set -x GOPATH $HOME/
+set -x PATH $GOPATH/bin $PATH
+
+set -x EDITOR 'nvr -cc split --remote-wait'
